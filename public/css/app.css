@@ -1,0 +1,866 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+   background-color: #f0ecd6; /* 任意の背景色を指定 */
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* ページのトップ部分 */
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+}
+
+.login_box form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  margin: auto; 
+  margin-top: 50px;
+}
+
+.login_box label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login_box input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login_box button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login_box button:hover {
+  background-color: #0056b3;
+}
+
+.login_box a {
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login_box p {
+ text-align: center;
+ margin-top: 16px;
+}
+
+
+.alert {
+  position: relative;
+  color: #158b2b;
+  font-size: 30px;
+  padding: 10px 0;
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+.alert:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 49.8%;
+  width: 180px;
+  height: 65px;
+  border-radius: 50%;
+  border: 5px solid #a6ddb0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+
+.alert a {
+  text-decoration: underline;
+  color: white;
+}
+
+/* ヘッダーの画像など */
+header {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+ 
+}
+
+header h1.concept {
+  width: 90%;
+  margin: auto;
+  position: absolute;
+  top: 250px;
+  left: 5%;
+  color: white;
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* ヘッダーのナビゲーション部分 */
+heads nav {
+  position: relative;
+  top: 0;
+  margin: auto;
+  padding: 0 5%;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  color: white;
+  transition: all .5s ease;
+}
+
+/* ヘッダーのjs処理 */
+heads  .motion {
+  background-color: rgba(0, 0, 0, 0.296);
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  transition: all .5s ease;
+  width: 100%;
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.g_nav {
+  text-align: right;
+  padding: 30px; /* 任意の余白を追加 */
+}
+
+.g_nav a {
+  display: inline-block;
+  margin-left: 50px; /* 各リンクの間に余白を追加 */
+  color: #066;
+  font-weight: bold; 
+}
+
+.sign {
+  font-weight: bold; 
+  padding: 10px; /* 任意の余白を追加 */
+  /* その他のスタイル */
+}
+
+
+
+
+
+
+/* スマホ画面 */
+header nav .sp_nav {
+  position: fixed;
+  top: 125px;
+  width: 12.5rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+/* スマホ画面メイン以外 */
+headers nav .sp_nav {
+  position: fixed;
+  top: 125px;
+  width: 12.5rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+headers nav .sp_signin {
+  color: black;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+headers nav .sp_menu {
+  color: black;
+  padding: 0 1rem;
+}
+
+headers nav .sp_nav a {
+  color: rgba(0, 0, 0, 0.137);
+}
+
+header nav .sp_signin {
+  color: black;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+header nav .sp_menu {
+  color: black;
+  padding: 0 1rem;
+}
+
+header nav .sp_nav a {
+  color: rgba(0, 0, 0, 0.253);
+}
+
+heads nav a {
+  color: white;
+}
+
+heads nav .logo img {
+  vertical-align: middle;
+}
+
+/* はじめに　体験　お問い合わせ */
+heads nav .g_nav {
+  flex: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 50px;
+}
+
+heads nav .g_nav .menu {
+  padding: 0 25px;
+  cursor: pointer;
+}
+
+/* サインインボタン */
+heads nav .sign {
+  flex: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  line-height: 50px;
+  color: blue;
+}
+
+heads nav .signin {
+  cursor: pointer; 
+
+}
+
+heads nav .sp {
+  display: none;
+}
+
+/* サインインボタン押した時の画面全体 */
+#modal #overlay {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* サインインの表示領域 */
+#signin_box {
+ z-index: 1000;
+ width: 40%;
+ background-color: white;
+ border-radius: 12px;
+ position: absolute;
+ animation-name: slideIn;
+ animation-duration: 0.5s;
+ animation-timing-function: ease-out;
+}
+
+/* アニメーション */
+@keyframes slideIn {
+  from {
+    margin-top: 50vh;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+/* ログインボタン */
+#signin_box h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#signin_box dl {
+  padding: 20px;
+}
+
+#signin_box dd {
+  padding: 5px 0;
+}
+
+/* メールアドレス　パスワード */
+#signin_box dd input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px 2.5px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
+
+/* 送信ボタン */
+#signin_box dd button {
+  color: white;
+  background-color: rgb(215,4,102);
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px 2.5px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* sns */
+#signin_box dl.sns {
+  border-top: 1px solid #ccc;
+}
+
+/* snsボタン */
+#signin_box .sns dd button {
+  color: black;
+  background-color: white;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px 2.5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#signin_box .sns dd img {
+  width: 1.5rem;
+  display: inline;
+}
+
+/* セクションの内容 */
+
+section {
+  margin: 40px 0;
+  padding: 0 5%;
+}
+
+
+
+section p {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+/* ここからメイン */
+main {
+  margin: 80px 0 60px;
+}
+
+.main_top {
+  background-color: rgb(247, 86, 145);
+  color: rgba(0, 0, 0, 0.078);
+}
+
+section h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+
+
+/* ここからホスト */
+.main_under {
+  background-color: white;
+  color: black;
+}
+
+.host {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+}
+
+.host .box {
+  padding: 10px 0;
+}
+
+.host .host_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.host .text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* フッター */
+footer {
+  border-top: 1px solid #ddd;
+  background-color: #f7f7f7;
+  padding: 4% 0;
+}
+
+footer .outer {
+  width: 90%;
+  margin: auto;
+  font-size: 0.9rem;
+}
+
+footer .nav_fo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+footer .inner h2 {
+  font-weight: bold;
+}
+
+footer .inner li {
+  margin: 1rem 0;
+}
+
+footer .inner a {
+  color: #333;
+}
+
+/* 一番下の所 */
+footer .reserved {
+  padding: 2% 0;
+  color: #333;
+  border-top: 1px solid #ccc;
+}
+
+.reserved .menu {
+  display: flex;
+}
+
+/* ジャンプボタン */
+.jump {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 3rem;
+  line-height: 3rem;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  background-color: black;
+  padding: 0 10px;
+  transition: all .3s ease;
+}
+
+/* contact.php */
+
+/* ヘッダー */
+headers heads {
+  background-color: rgba(231, 207, 248, 0.8);
+  position:absolute;
+  width: 100%;
+  top: 0;
+}
+
+
+.contact_box {
+  width: 70%;
+  margin: 5% auto;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+}
+
+.contact_box h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact_box form {
+  margin: 3%;
+}
+
+.contact_box h3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eaeaea));
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  padding: 1%;
+  margin: 1% 0;
+}
+
+.contact_box p {
+  font-weight: normal;
+}
+
+.contact_box .required {
+  color: red;
+}
+
+.contact_box dl {
+  margin: 2% 0;
+}
+
+.contact_box dd {
+  padding: 0.5% 0 1%;
+  font-size: 1.2rem;
+}
+
+.contact_box input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px 2.5px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
+
+.contact_box textarea {
+  resize: none;
+  width: 100%;
+  height: 33hv;
+  font-size: 1.2rem;
+  padding: 10px 2.5px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.contact_box button {
+  color: white;
+  background-color: rgba(215,4,102);
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px 2.5px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* conform.phpの設定 */
+.contact_box .confirm dt {
+  margin-top: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact_box .confirm dd {
+  padding: 1%;
+  word-wrap: break-word;
+}
+
+.contact_box .confirm dd.confirm_btn {
+  padding: 1% 0;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.contact_box .confirm dd.confirm_btn input {
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 10px;
+  background-color: transparent;
+  border: 2px solid #066;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #066;
+}
+
+/* complete.phpの設定 */
+.logu {
+  padding: 3%;
+}
+
+.logu p {
+  font-weight: normal;
+}
+
+.logu a {
+  display: block;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+
+.parent-container {
+  text-align: center;
+}
+
+.centered-link {
+  display: inline-block;
+  /* その他のスタイル */
+}
+
+
+
+.mypage {
+  text-align: center; /* 親要素を中央揃えにする */
+}
+
+.mypage input[type="button"] {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center; /* ボタン内のテキストを中央揃えにする */
+  display: inline-block; /* ボタンをインラインブロックとして表示する */
+  margin-top: 20px; /* 適切なマージンを追加して上下中央に配置する */
+}
+
+.mypage input[type="button"]:hover {
+  background-color: darkred;
+}
+
+
+
+
+
+/* お問合せのメイン */
+.boxs {
+  margin: 40px 0;
+  padding: 3% 5%;
+}
+
+/* エラー時の出力 */
+.error {
+  font-size: 12px;
+  color: red;
+}
+
+/* メディアクエリ */
+@media screen and (max-width: 896px) {
+
+  /* スマホログイン */
+  header nav .sp_nav_motion {
+    top: 65px;
+  }
+
+  header nav .sp_nav {
+    box-shadow: 0 10px 25px 0 rgba(100, 100, 100, 0.5);
+  }
+
+  headers nav .sp_menu {
+    display: block;
+  }
+
+  header nav .sp_nav a {
+    display: block;
+  }
+
+  .contact header nav .g_nav {
+    display: none;
+  }
+  .contact header nav .sp_nav_motion {
+    top: 65px;
+  }
+
+  header nav .g_nav {
+    display: none;
+  }
+
+  headers heads nav .g_nav {
+    display: none;
+  }
+
+  heads nav .signin {
+    display: none;
+  }
+
+  header nav .sp {
+    display: block;
+  }
+
+  /* spヘッダーメニュー */
+  headers nav .sp {
+    display: block;
+  }
+
+  header nav .sp_nav {
+    box-shadow: 0 10px 25px 0 rgba(100, 100, 100, 0.5);
+  }
+  header nav .sp_nav a {
+    display: block;
+  }
+  header nav .sp_nav_motion {
+    top: 65px;
+  }
+  header nav .sp_menu {
+    display: block;
+  }
+  header nav .sp img {
+    width: 50px;
+  }
+
+  /* ヘッダーメニュー大きさ */
+  headers nav .sp img {
+    width: 50px;
+  }
+
+  header nav .signin {
+    display: none;
+  }
+  .cafe_map {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .loke {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .goto_text {
+    top: 25;
+    left: 25;
+  }
+  .goto_text h3 {
+    font-size: 32px;
+  }
+  .goto_text p {
+    font-size: 1.2rem;
+  }
+  
+  #signin_box {
+    width: 60%;
+  }
+  .contact_box {
+    width: 90%;
+  }
+  
+}
+  
+
+
+
+
+/* スタイルの例。実際のデザインに合わせて調整してください。 */
+.db_table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.db_table th, .db_table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.db_table th {
+  background-color: #f6efef;
+}
+
+.db_table tr:hover {
+  background-color: #eedcdc;
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+  
+  header h1.concept {
+    font-size: 48px;
+  }
+  .goto_text {
+    position: static;
+  }
+  footer .nav_fo {
+    display: block;
+  }
+  footer .inner h2 {
+    border-bottom: 1px solid #ccc;
+  }
+  
+}
+  
+@media screen and (max-width: 480px) {
+  
+  header h1.concept {
+    font-size: 32px;
+  }
+  .cafe_map {
+    display: block;
+  }
+  
+  .experience {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .host {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  #signin_box {
+    width: 80%;
+  }
+  .contact_box {
+    width: 98%;
+  }
+  
+
+  
+
+}
